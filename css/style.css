@@ -4,13 +4,13 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0 !important;
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #000000;
+  color: #000;
 }
 
 a {
@@ -81,15 +81,16 @@ textarea:focus {
   position: fixed;
   right: 25px;
   bottom: 25px;
-  transform: rotate(180deg);
+  width: 75px;
   opacity: 0.75;
-  background-color: #bef4ff;
+  padding: 10px;
   border-radius: 50%;
-  width: 50px;
+  border: 2px solid red;
   transition: all 0.4s ease-out;
 }
 .arrow:hover {
   opacity: 1;
+  animation: 1s linear 0s infinite running arrow_anim;
 }
 
 .header {
@@ -206,6 +207,7 @@ textarea:focus {
 }
 
 .slick-list {
+  overflow: hidden;
   margin-top: 50px;
 }
 .slick-track {
@@ -224,10 +226,6 @@ textarea:focus {
   opacity: 1;
   color: #000;
 }
-.slick-arrow {
-  overflow: hidden;
-  opacity: 0;
-}
 
 .footer {
   margin: 75px 0 0 0;
@@ -235,7 +233,7 @@ textarea:focus {
   background-color: rgba(255, 255, 255, 0.55);
 }
 .footer__title {
-  padding-top: 10px;
+  padding-top: 25px;
   display: flex;
   gap: 10px;
   justify-content: center;
@@ -332,5 +330,22 @@ textarea:focus {
   }
   100% {
     transform: none;
+  }
+}
+@keyframes arrow_anim {
+  17% {
+    bottom: 30px;
+  }
+  33% {
+    bottom: 25px;
+  }
+  50% {
+    bottom: 35px;
+  }
+  75% {
+    bottom: 25px;
+  }
+  100% {
+    bottom: 25px;
   }
 }
