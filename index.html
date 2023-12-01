@@ -29,7 +29,7 @@
       <div class="top__logo-title">СоЧит</div>
     </a>
 
-    <a href="#" class="top__login">Войти</a>
+    <a href="#login-popup" class="top__login popup-link">Войти</a>
 </div>
 
       <header id="header" class="header">
@@ -72,28 +72,32 @@
 </header>
       <main id="main" class="main no-select">
     <section class="main__choose choose">
-      <a href="creator.html" class="choose__block">
-        <div class="choose__block-title">Творец</div>
-        <div class="choose__block-line"></div>
-        <!--* quote -->
-        <div class="choose__block-quote">
-          <div class="choose__block-quote-text">«Настоящая литература может быть только там, где её делают не исполнительные и благодушные чиновники, а безумцы, отшельники, еретики, мечтатели, бунтари, скептики.»</div>
-          <div class="choose__block-quote-author">
-            <img src="img/icons/quote/quote_0.png" alt="Zamyatin" title="Е. И. Замятин" class="choose__block-quote-author-img">
-            <div class="choose__block-quote-author-name">Е. И. Замятин</div>
+      <a href="creator.html" class="choose__block-a">
+        <div class="choose__block">
+          <div class="choose__block-title">Творец</div>
+          <div class="choose__block-line"></div>
+          <!--* quote -->
+          <div class="choose__block-quote">
+            <div class="choose__block-quote-text">«Настоящая литература может быть только там, где её делают не исполнительные и благодушные чиновники, а безумцы, отшельники, еретики, мечтатели, бунтари, скептики.»</div>
+            <div class="choose__block-quote-author">
+              <img src="img/icons/quote/quote_0.png" alt="Zamyatin" title="Е. И. Замятин" class="choose__block-quote-author-img">
+              <div class="choose__block-quote-author-name">Е. И. Замятин</div>
+            </div>
           </div>
         </div>
       </a>
 
-      <a href="reader.html" class="choose__block">
-        <div class="choose__block-title">Ценитель</div>
-        <div class="choose__block-line"></div>
-        <!--* quote -->
-        <div class="choose__block-quote">
-          <div class="choose__block-quote-text">«Каждому истинному читателю бесконечно огромный мир книг открывается по-своему, каждый в нем ищет и находит ещё и себя самого.»</div>
-          <div class="choose__block-quote-author">
-            <img src="img/icons/quote/quote_1.png" alt="Gesse" title="Г. Гессе" class="choose__block-quote-author-img">
-            <div class="choose__block-quote-author-name">Г. Гессе</div>
+      <a href="reader.html" class="choose__block-a">
+        <div class="choose__block">
+          <div class="choose__block-title">Ценитель</div>
+          <div class="choose__block-line"></div>
+          <!--* quote -->
+          <div class="choose__block-quote">
+            <div class="choose__block-quote-text">«Каждому истинному читателю бесконечно огромный мир книг открывается по-своему, каждый в нем ищет и находит ещё и себя самого.»</div>
+            <div class="choose__block-quote-author">
+              <img src="img/icons/quote/quote_1.png" alt="Gesse" title="Г. Гессе" class="choose__block-quote-author-img">
+              <div class="choose__block-quote-author-name">Г. Гессе</div>
+            </div>
           </div>
         </div>
       </a>
@@ -108,17 +112,17 @@
     <div class="footer__container">
       <!--* block 1 -->
       <div class="footer__block">
-        <div class="footer__block-text">
-          <img src="img/icons/footer/info.png" alt="Info" class="footer__block-text-icon no-select">
-          <div class="footer__block-text">Литературная платформа, направленная на популяризацию произведений малоизвестных авторов.</div>
+        <div class="footer__block-content-s">
+          <img src="img/icons/footer/info.png" alt="Info" class="footer__block-content-s-icon no-select">
+          <div class="footer__block-content-s-text">Литературная платформа, направленная на популяризацию произведений малоизвестных авторов.</div>
         </div>
       </div>
 
       <!--* block 2 -->
       <div class="footer__block no-select">
-        <div class="footer__block-text">
-          <img src="img/icons/footer/contacts/chat.png" alt="Contacts" class="footer__block-text-icon">
-          Контакты:
+        <div class="footer__block-content">
+          <img src="img/icons/footer/contacts/chat.png" alt="Contacts" class="footer__block-content-icon">
+          <div class="footer__block-content-text">Контакты:</div>
         </div>
         <div class="footer__block-container">
           <a href="#" class="footer__block-container-elem-a"><img src="img/icons/footer/contacts/tg.png" alt="Telegram" title="Telegram" class="footer__block-container-elem"></a>
@@ -128,14 +132,56 @@
       
       <!--* block 3 -->
       <div class="footer__block no-select">
-        <div class="footer__block-text">
-          <img src="img/icons/footer/picture.png" alt="Images" class="footer__block-text-icon">
-          Иллюстрации:
-          <a href="https://www.flaticon.com/" target="blank" class="footer__block-text-link">flaticon.com</a>
+        <div class="footer__block-content" style="flex-direction: column;">
+          <div class="footer__block-content-text-container">
+            <img src="img/icons/footer/picture.png" alt="Images" class="footer__block-content-icon">
+            <div class="footer__block-content-text">Иллюстрации:</div>
+          </div>
+          <a href="https://www.flaticon.com/" target="blank" class="footer__block-content-link">flaticon.com</a>
         </div>
       </div>
     </div>
 </footer>
+      <div id="login-popup" class="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#" class="popup__close"><strong>&times;</strong></a>
+            <div class="popup__content-form popup__form">
+                <div class="popup__form-title">Регистрация</div>
+    
+                <form action="#" class="popup__form-content no-select">
+                    <div class="popup__form-block">
+                        <label for="firstname" class="popup__form-text">Имя</label>
+                        <input type="text" id="firstname" class="popup__form-input" placeholder="Михаил" required>
+                    </div>
+
+                    <div class="popup__form-block">
+                        <label for="secondname" class="popup__form-text">Фамилия</label>
+                        <input type="text" id="secondname" class="popup__form-input" placeholder="Достоевский" required>
+                    </div>
+
+                    <div class="popup__form-block">
+                        <label for="patronymic" class="popup__form-text">Отчество<br><span>(при наличии)</span></label>
+                        <input type="text" id="patronymic" class="popup__form-input" placeholder="Николаевич">
+                    </div>
+
+                    <div class="popup__form-block">
+                        <label for="pseudo" class="popup__form-text">Псевдоним<br><span>(при наличии)</span></label>
+                        <input type="text" id="pseudo" class="popup__form-input" placeholder="Псевдоним">
+                    </div>
+
+                    <div class="popup__form-block">
+                        <button type="submit" class="popup__form-button">Войти</button>
+                    </div>
+
+                    <div class="popup__form-block">
+                        <a href="#" class="popup__form-link">Войти в существующий профиль</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
     </div>
     
     <script src="./js/script.min.js"></script>
