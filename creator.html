@@ -21,15 +21,95 @@
 
   <body>
     <div class="wrapper">
-      <a href="#header" class="arrow-a"><img src="img/icons/arrow-up.png" alt="Up" class="arrow"></a>
+      <a href="#creator-header" class="arrow-a"><img src="img/icons/arrow-up.png" alt="Up" class="arrow"></a>
       
-      
-      <header class="header">
-    <div class="header__title">Вы - творец</div>
-    <div class="header__subtitle">Писатель, поэт, прозаик, эссеист, словом - деятель искусства.</div>
+      <div class="top no-select">
+    <a href="index.html" class="top__logo">
+      <img src="img/logo.png" alt="СоЧит | Creade" class="top__logo-img">
+      <div class="top__logo-title">СоЧит</div>
+    </a>
+
+    <a href="#" class="top__login">Войти</a>
+</div>
+
+      <header id="creator-header" class="header">
+    <div class="header__title header__title-special no-select">ТВОРЕЦ</div>
+    <div class="header__subtitle">Писатель, поэт, прозаик, эссеист,<br>словом - деятель искусства.</div>
+
+    <div class="header__bottom">
+        <div class="header__bottom-line"></div>
+        <div class="header__bottom-text" style="font-size: 42px;">Создайте своё<br>произведение искусства</div>
+        <a href="#creator-main" class="header__bottom-arrow-a"><img src="img/icons/arrow-down.png" alt="Down" class="header__bottom-arrow"></a>
+    </div>
 </header>
 
-      
+      <main id="creator-main" class="main">
+    <div class="main__form">
+        <div class="main__form-title">Быстрая<br>публикация</div>
+
+        <div class="main__form-body no-select">
+            <form action="" method="get">
+                <label for="name" class="main__form-text">Название</label>
+                <input type="text" name="name" id="name" placeholder="Мир и война" class="main__form-input" required>
+            </form>
+    
+            <form action="" method="get">
+                <label for="desc" class="main__form-text">Описание</label>
+                <input type="text" name="desc" id="desc" placeholder="Лучше не найти!" class="main__form-input">
+            </form>
+
+            <div class="main__form-upload">
+                <div class="main__form-upload-block">
+                    <div class="main__form-upload-title main__form-text">Текст</div>
+                    <form action="send.php" method="POST" id="file_upload">
+                        <input type="file" name="file" id="file" accept="application/pdf" class="main__form-input" required>
+                        <label for="file" id="file-label">
+                            <img src="img/icons/form/upload.png" alt="Upload" class="main__form-img">
+                            <div class="main__form-input-container">
+                                <div id="file-label-text" class="main__form-text-inside">
+                                    Выберите файл<br>
+                                    <!-- <span>или перетащите его</span> -->
+                                </div>
+                            </div>
+                        </label>
+                    </form>
+                </div>
+
+                <div class="main__form-upload-block">
+                    <div class="main__form-upload-title main__form-text">Обложка</div>
+                    <form action="send.php" method="POST" id="cover_upload">
+                        <input type="file" name="cover" id="cover" accept="image/*" class="main__form-input" required>
+                        <label for="cover" id="cover-label">
+                            <img src="img/icons/form/upload.png" alt="Upload" class="main__form-img">
+                            <div class="main__form-input-container">
+                                <div id="cover-label-text" class="main__form-text-inside">
+                                    Выберите файл<br>
+                                    <!-- <span>или перетащите его</span> -->
+                                </div>
+                            </div>
+                        </label>
+                    </form>
+                </div>
+            </div>
+
+            <button class="main__form-button">Опубликовать</button>
+            <br>
+            <a href="#" class="main__form-link">Расширенный режим</a>
+        </div>
+    </div>
+
+    <div class="main__link">
+        <div class="main__link-line"></div>
+        <div class="main__link-text" style="font-size: 42px;">Что сочиняют другие авторы?</div>
+        <a href="#" class="main__link-arrow-a"><img src="img/icons/arrow-down.png" alt="Down" class="main__link-arrow"></a>
+    </div>
+
+    <div class="main__link">
+        <div class="main__link-line"></div>
+        <div class="main__link-text" style="font-size: 42px;">Вдохновитесь<br>классической литературой</div>
+        <a href="#" class="main__link-arrow-a"><img src="img/icons/arrow-down.png" alt="Down" class="main__link-arrow"></a>
+    </div>
+</main>
       <footer class="footer">
     <div class="footer__title no-select">
       <img src="img/logo.png" alt="СоЧит | Creade" class="top__logo-img">

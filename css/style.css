@@ -5,6 +5,8 @@
 }
 
 html, body {
+  width: 100%;
+  height: 100%;
   margin: 0 !important;
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
@@ -78,6 +80,7 @@ textarea:focus {
 }
 
 .arrow {
+  display: none;
   position: fixed;
   right: 25px;
   bottom: 25px;
@@ -109,6 +112,11 @@ textarea:focus {
 .header__title-special {
   color: #750000;
   text-shadow: 5px 5px 0px rgba(171, 125, 5, 0.25);
+}
+.header__subtitle {
+  margin-top: 35px;
+  font-size: 42px;
+  color: rgba(0, 0, 0, 0.75);
 }
 .header__bottom-line {
   margin: 75px auto 0 auto;
@@ -279,6 +287,161 @@ textarea:focus {
 }
 .footer__block-container-elem:hover {
   opacity: 0.8;
+}
+
+.header__title-special {
+  font-size: 78px;
+}
+
+.main {
+  text-align: center;
+}
+.main__link-line {
+  margin: 75px auto 0 auto;
+  border-bottom: 3px solid #000;
+  width: 7%;
+}
+.main__link-text {
+  margin-top: 15px;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 46px;
+  letter-spacing: 2.3px;
+}
+.main__link-arrow {
+  margin-top: 25px;
+  width: 50px;
+  opacity: 0.6;
+  transition: all 0.5s;
+}
+.main__link-arrow:hover {
+  opacity: 1;
+  animation: 1s linear 0s infinite alternate arrow_drag;
+}
+.main__form {
+  text-align: center;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.55);
+}
+.main__form-title {
+  font-family: "RocknRoll One", sans-serif;
+  letter-spacing: -9.6px;
+  font-size: 48px;
+}
+.main__form-body {
+  margin-top: 15px;
+}
+.main__form-text {
+  margin-right: 25px;
+  font-size: 32px;
+  font-weight: 600;
+}
+.main__form-text-inside {
+  font-size: 18px;
+  line-height: 20px;
+  margin: 10px 10px auto 10px;
+}
+.main__form-text, .main__form-input {
+  margin-top: 35px;
+}
+.main__form-input, .main__form-button {
+  font-family: "Roboto Mono", sans-serif;
+  margin-left: 25px;
+  font-size: 28px;
+  border-radius: 15px;
+}
+.main__form-input {
+  padding: 7px 10px;
+  width: 300px;
+}
+.main__form-input-container {
+  margin: 20px;
+  margin-top: 0;
+  position: relative;
+  z-index: 10;
+}
+.main__form-upload {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.main__form-upload-title {
+  margin: 0;
+}
+.main__form-img {
+  margin-top: 20px;
+  width: 40%;
+  opacity: 0.75;
+}
+.main__form #file_upload, .main__form #cover_upload {
+  margin-top: 15px;
+  font-family: "Roboto Mono", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 22px;
+}
+.main__form #file_upload label, .main__form #cover_upload label {
+  min-width: 250px;
+  max-width: 250px;
+  outline: 2px dashed #5d5d5d;
+  border-radius: 15px;
+  font-weight: 600;
+}
+.main__form #file_upload label span, .main__form #cover_upload label span {
+  font-weight: 400;
+}
+.main__form #file_upload label:hover, .main__form #cover_upload label:hover {
+  cursor: pointer;
+}
+.main__form #file_upload label.focus, .main__form #cover_upload label.focus {
+  outline: 1px solid #2219d0;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+.main__form #file_upload span, .main__form #cover_upload span {
+  font-size: 14px;
+}
+.main__form #file_upload input[type=file], .main__form #cover_upload input[type=file] {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  z-index: -10;
+}
+.main__form #file_upload input[type=file]:focus, .main__form #cover_upload input[type=file]:focus {
+  outline: 1px solid #2219d0;
+}
+.main__form #file_upload input[type=file]:focus + label, .main__form #cover_upload input[type=file]:focus + label {
+  outline: 1px solid #2219d0;
+  outline: -webkit-focus-ring-color 5px auto;
+}
+.main__form #file_upload .dragover, .main__form #cover_upload .dragover {
+  background-color: #fafafa;
+  outline-offset: -17px;
+}
+.main__form #file_upload .success, .main__form #cover_upload .success {
+  background-color: rgb(42, 255, 102);
+}
+.main__form-button {
+  margin: 35px;
+  margin-bottom: 15px;
+  background-color: rgb(255, 221, 221);
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: all 0.4s ease-out;
+}
+.main__form-button:hover {
+  background-color: rgb(254, 172, 172);
+}
+.main__form-link {
+  font-size: 24px;
+  transition: all 0.4s ease-out;
+}
+.main__form-link:hover {
+  color: #2219d0;
 }
 
 @keyframes login_anim {
