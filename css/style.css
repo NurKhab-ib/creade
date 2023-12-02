@@ -477,6 +477,29 @@ textarea:focus {
 .main__form-link:hover {
   color: #2219d0;
 }
+.main__books {
+  background-color: rgba(255, 255, 255, 0.65);
+  width: 100%;
+}
+.main__books-body {
+  margin: 0 100px;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.book__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#book-01 {
+  background: url("/img/books/01.png") center no-repeat;
+}
+#book-02 {
+  background: url("/img/books/02.png") center no-repeat;
+}
+#book-03 {
+  background: url("/img/books/03.png") center no-repeat;
+}
 
 .popup {
   position: fixed;
@@ -633,7 +656,7 @@ textarea:focus {
     width: 50px;
   }
   .header {
-    padding: 75px 25px 50px 25px;
+    padding: 100px 25px 50px 25px;
   }
   .header__title, .header__title-special {
     font-size: 58px;
@@ -676,6 +699,9 @@ textarea:focus {
   .footer__block-content-text, .footer__block-content-s-text {
     font-size: 18px;
   }
+  .footer__block-content-link, .footer__block-content-s-link {
+    font-size: 18px;
+  }
   .popup__content {
     padding: 15px 25px;
   }
@@ -701,6 +727,10 @@ textarea:focus {
   }
 }
 @media (max-width: 448px) {
+  .header__title, .header__title-special {
+    font-size: 52px;
+    letter-spacing: 0px;
+  }
   .choose__block-title {
     font-size: 44px;
   }
@@ -725,6 +755,9 @@ textarea:focus {
   .footer__block-content-text, .footer__block-content-s-text {
     font-size: 16px;
   }
+  .footer__block-content-link, .footer__block-content-s-link {
+    font-size: 16px;
+  }
   .footer__block-content-s-icon {
     width: 26px;
     height: 26px;
@@ -746,8 +779,31 @@ textarea:focus {
     padding: 7px 10px;
     font-size: 16px;
   }
+  .slider__elem-icon {
+    width: 42px;
+  }
+  .slider__elem-text {
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+  }
+  .slick-list {
+    margin-top: 25px;
+  }
+  .slick-slide {
+    opacity: 0;
+  }
+  .slick-active {
+    opacity: 1;
+  }
 }
 @media (max-width: 374px) {
+  .header__title {
+    font-size: 34px;
+  }
+  .header__title-special {
+    font-size: 38px;
+  }
   .choose__block-title {
     font-size: 32px;
   }
@@ -764,6 +820,12 @@ textarea:focus {
   }
   .choose__block:hover .choose__block-title {
     font-size: 36px;
+  }
+  .slider__elem-icon {
+    width: 38px;
+  }
+  .slider__elem-text {
+    font-size: 28px;
   }
 }
 @keyframes login_anim {
