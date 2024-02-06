@@ -57,7 +57,7 @@ textarea:focus {
   gap: 15px;
   padding: 15px;
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .top__logo-img {
   border-radius: 15px;
@@ -95,6 +95,7 @@ textarea:focus {
   padding: 10px;
   border-radius: 50%;
   border: 2px solid red;
+  user-select: none;
   transition: all 0.4s ease-out;
 }
 .arrow:hover {
@@ -150,6 +151,11 @@ textarea:focus {
   display: flex;
   flex-wrap: nowrap;
   text-align: center;
+}
+.main-no {
+  font-size: 30px;
+  font-style: italic;
+  margin-top: 15px;
 }
 
 .choose__block {
@@ -332,7 +338,6 @@ textarea:focus {
   letter-spacing: 2.3px;
 }
 .main__link-arrow {
-  margin-top: 25px;
   width: 50px;
   opacity: 0.6;
   transition: all 0.5s;
@@ -364,7 +369,7 @@ textarea:focus {
   line-height: 20px;
   margin: 10px 10px auto 10px;
 }
-.main__form-text, .main__form-input {
+.main__form-input {
   margin-top: 35px;
 }
 .main__form-input, .main__form-button {
@@ -375,7 +380,7 @@ textarea:focus {
 }
 .main__form-input {
   padding: 7px 10px;
-  width: 300px;
+  max-width: 300px;
 }
 .main__form-input-container {
   margin: 20px;
@@ -477,15 +482,19 @@ textarea:focus {
 .main__form-link:hover {
   color: #2219d0;
 }
-.main__books {
-  background-color: rgba(255, 255, 255, 0.65);
-  width: 100%;
+.main__block-link {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
 }
-.main__books-body {
-  margin: 0 100px;
-  display: grid;
-  gap: 50px;
-  grid-template-columns: 1fr 1fr 1fr;
+.main__block-link-text {
+  font-size: 30px;
+  align-self: center;
+}
+.main__block-link a {
+  align-self: center;
 }
 
 .book__overlay {
@@ -499,6 +508,94 @@ textarea:focus {
 }
 #book-03 {
   background: url("/img/books/03.png") center no-repeat;
+}
+
+.main__books {
+  margin-top: 15px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.65);
+  width: 100%;
+}
+.main__books-title {
+  font-size: 35px;
+}
+.main__books-link {
+  font-size: 28px;
+}
+.main__books-link:hover {
+  color: #2219d0;
+}
+.main__books-container {
+  margin: 25px 100px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.book {
+  position: relative;
+  justify-self: center;
+  background: #737373;
+  padding: 40%;
+  transition: all 0.4s ease;
+}
+.book, .book__bg, .book__overlay, .book__info {
+  border-radius: 15px;
+}
+.book a {
+  color: #fff;
+}
+.book__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.book__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+}
+.book__info {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 25%;
+  padding: 5px;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+.book__info-hidden {
+  visibility: hidden;
+}
+.book__info-title {
+  font-size: 30px;
+  margin-top: 10px;
+}
+.book__info-author, .book__info-date {
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.75);
+}
+.book__info-b {
+  padding: 15px;
+  font-size: 35px;
+}
+.book:hover .book__overlay {
+  opacity: 1;
+}
+.book:hover .book__info {
+  height: 40%;
+}
+.book:hover .book__info-hidden {
+  visibility: visible;
 }
 
 .popup {
@@ -612,8 +709,12 @@ textarea:focus {
     display: block;
   }
   .choose__block {
+    margin-top: 10px;
     flex: 0 1 auto;
     padding: 0 25px;
+  }
+  .choose__block-title {
+    padding-top: 10px;
   }
 }
 @media (max-width: 992px) {
@@ -658,14 +759,17 @@ textarea:focus {
   .header {
     padding: 100px 25px 50px 25px;
   }
-  .header__title, .header__title-special {
-    font-size: 58px;
+  .header__title-special {
+    font-size: 66px;
+  }
+  .header__title {
+    font-size: 60px;
   }
   .header__subtitle {
-    font-size: 38px;
+    font-size: 34px;
   }
   .header__bottom-text {
-    font-size: 40px;
+    font-size: 36px;
     margin-top: 10px;
   }
   .header__bottom-arrow {
@@ -754,9 +858,36 @@ textarea:focus {
   }
 }
 @media (max-width: 448px) {
-  .header__title, .header__title-special {
-    font-size: 52px;
+  .header {
+    padding-bottom: 25px;
+  }
+  .header__title {
+    font-size: 44px;
     letter-spacing: 0px;
+  }
+  .header__title-special {
+    font-size: 48px;
+    letter-spacing: -5px;
+  }
+  .header__subtitle {
+    margin-top: 10px;
+    font-size: 26px;
+  }
+  .header__bottom-line {
+    margin-top: 35px;
+  }
+  .header__bottom-text {
+    font-size: 24px;
+  }
+  .header__bottom-arrow {
+    margin-top: 10px;
+    width: 30px;
+  }
+  .main-no {
+    font-size: 25px;
+  }
+  .main__form {
+    padding: 25px 10px;
   }
   .main__form-title {
     font-size: 40px;
@@ -777,11 +908,43 @@ textarea:focus {
   .main__form-upload-block {
     margin-top: 35px;
   }
+  .main__link-line {
+    margin-top: 35px;
+  }
+  .main__link-text {
+    font-size: 28px;
+  }
+  .main__link-arrow {
+    margin-top: 10px;
+    width: 30px;
+  }
+  .main__books {
+    padding: 10px;
+    grid-template-columns: 1fr;
+  }
+  .main__books-link {
+    font-size: 20px;
+  }
+  .main__books-container {
+    margin: 10px 25px;
+  }
+  .book__info-title {
+    margin-top: 0px;
+    font-size: 12px;
+  }
+  .book__info-b {
+    margin-top: 5px;
+    font-size: 16px;
+    padding: 0;
+  }
+  .book__info-author, .book__info-date {
+    font-size: 14px;
+  }
   .choose__block-title {
-    font-size: 44px;
+    font-size: 42px;
   }
   .choose__block-quote-text {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 24px;
   }
   .choose__block-quote-author-img {
@@ -792,7 +955,10 @@ textarea:focus {
     font-size: 15px;
   }
   .choose__block:hover .choose__block-title {
-    font-size: 48px;
+    font-size: 44px;
+  }
+  .footer {
+    margin-top: 15px;
   }
   .footer__block-content-icon, .footer__block-content-s-icon {
     width: 22px;
@@ -845,17 +1011,25 @@ textarea:focus {
 }
 @media (max-width: 374px) {
   .header__title {
-    font-size: 34px;
+    font-size: 30px;
   }
   .header__title-special {
     font-size: 38px;
   }
   .choose__block-title {
-    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+  }
+  .choose__block-line {
+    margin-top: 15px;
   }
   .choose__block-quote-text {
     font-size: 14px;
     line-height: 20px;
+  }
+  .choose__block-quote-author {
+    margin-top: 5px;
   }
   .choose__block-quote-author-img {
     width: 30px;
@@ -865,13 +1039,99 @@ textarea:focus {
     font-size: 12px;
   }
   .choose__block:hover .choose__block-title {
-    font-size: 36px;
+    font-size: 32px;
   }
   .slider__elem-icon {
     width: 38px;
   }
   .slider__elem-text {
     font-size: 28px;
+  }
+}
+@media (max-width: 250px) {
+  .arrow {
+    width: 40px;
+    padding: 5px;
+  }
+  .top__logo {
+    padding: 5px;
+    gap: 10px;
+  }
+  .top__logo-img {
+    width: 20px;
+    height: 20px;
+    border-radius: 7px;
+    align-self: center;
+  }
+  .top__logo-title {
+    font-size: 20px;
+  }
+  .top__login {
+    font-size: 15px;
+  }
+  .header__title {
+    font-size: 30px;
+  }
+  .header__title-special {
+    font-size: 38px;
+  }
+  .header__bottom {
+    margin-top: -50px;
+  }
+  .header__bottom-text {
+    font-size: 20px;
+    letter-spacing: 0px;
+    margin-top: 5px;
+  }
+  .header__bottom-arrow {
+    width: 30px;
+    margin-top: 5px;
+  }
+  .choose__block {
+    margin-top: 5px;
+  }
+  .choose__block-title {
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+  }
+  .choose__block-quote-text {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .choose__block-quote-author-img {
+    width: 30px;
+    height: 30px;
+  }
+  .choose__block-quote-author-name {
+    font-size: 10px;
+  }
+  .choose__block:hover .choose__block-title {
+    font-size: 30px;
+  }
+  .slider__elem-text {
+    font-size: 22px;
+  }
+  .footer {
+    margin-top: 25px;
+  }
+  .footer__container {
+    margin: 5px 25px 0 25px;
+  }
+  .footer__block-content-icon, .footer__block-content-s-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .footer__block-content-text, .footer__block-content-s-text {
+    font-size: 14px;
+  }
+  .footer__block-content-link, .footer__block-content-s-link {
+    font-size: 13px;
+  }
+  .footer__block-content-s-icon {
+    width: 22px;
+    height: 22px;
   }
 }
 @keyframes login_anim {

@@ -23,35 +23,106 @@
     <div class="wrapper">
       <a href="#header" class="arrow-a"><img src="img/icons/arrow-up.png" alt="Up" class="arrow"></a>
       
-      
+      <div class="top no-select">
+    <a href="index.html" class="top__logo">
+      <img src="img/logo.png" alt="СоЧит | Creade" class="top__logo-img">
+      <div class="top__logo-title">СоЧит</div>
+    </a>
+
+    <a href="#login-popup" class="top__login popup-link">Войти</a>
+</div>
+
       <header id="creator-header" class="header">
     <div class="header__title header__title-special no-select">ЦЕНИТЕЛЬ</div>
-    <div class="header__subtitle">Эстетик, любитель, фантазёр, мечтатель, <br> или просто читатель.</div>
-
-    <div class="header__bottom">
-        <div class="header__bottom-line"></div>
-        <div class="header__bottom-text" style="font-size: 42px;">Взгляните, что сочиняют<br>авторы платформы</div>
-        <a href="#reader-main" class="header__bottom-arrow-a"><img src="img/icons/arrow-down.png" alt="Down" class="header__bottom-arrow"></a>
-    </div>
+    <div class="header__subtitle">Эстетик, любитель, фантазёр, мечтатель —<br> читатель</div>
 </header>
 
       <main id="reader-main" class="main">
-    <div class="main__books-user"></div>
-
     <div class="main__link">
         <div class="main__link-line"></div>
-        <div class="main__link-text" style="font-size: 42px;">Насладитесь<br>классической литературой</div>
-        <a href="#classic-books-r" class="main__link-arrow-a"><img src="img/icons/arrow-down.png" alt="Down" class="main__link-arrow"></a>
+        <div class="main__link-text">Взгляните, что сочиняют<br>авторы платформы</div>
+        <a href="#user-books" class="main__link-arrow-a"><img src="img/icons/arrow-down.png" alt="Down" class="main__link-arrow" style="margin-top: 15px;"></a>
     </div>
 
-    <div id="classic-books-r" class="main__books"></div>
+    <!-- <div id="user-books-r" class="main__block">
+        <div class="main__books">
+            <div class="main__books-body">
+                <div class="main__books-no">Здесь пока ничего нет.</div>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="user-books" class="main__block">
+        <div class="main-no">Здесь пока ничего нет.</div>
+    </div>
 
     <div class="main__link">
         <div class="main__link-line"></div>
-        <div class="main__link-text" style="font-size: 42px;">Захотели также?<br>Присоединяйтесь!</div>
-        <a href="creator.html" class="main__link-arrow-a"><img src="img/icons/arrow-link.png" alt="Creator Page Link" class="main__link-arrow"></a>
+        <div class="main__link-text">Насладитесь<br>классической литературой</div>
+        <a href="#classic-books-r" class="main__link-arrow-a"><img src="img/icons/arrow-down.png" alt="Down" class="main__link-arrow" style="margin-top: 15px;"></a>
+    </div>
+
+    <div id="classic-books-r" class="main__books">
+        <div class="main__books-container">
+            <div class="main__books-item book">
+                <a href="https://ilibrary.ru/text/69/p.1/index.html" target="blank" class="book-a">
+                    <img src="./img/books/01.png" alt="Преступление и наказание" class="book__bg">
+                    <div class="book__overlay"></div>
+                    <div class="book__info">
+                        <div class="book__info-title">Преступление и наказание</div>
+                        <div class="book__info-hidden">
+                            <div class="book__info-author">Ф. М. Достоевский</div>
+                            <div class="book__info-date">1865-1866</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="main__books-item book">
+                <a href="https://ilibrary.ru/text/11/index.html" target="blank" class="book-a">
+                    <img src="./img/books/02.png" alt="Война и мир" class="book__bg">
+                    <div class="book__overlay"></div>
+                    <div class="book__info">
+                        <div class="book__info-title book__info-b">Война и мир</div>
+                        <div class="book__info-hidden">
+                            <div class="book__info-author">Л. Н. Толстой</div>
+                            <div class="book__info-date">1863-1869, 1873</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="main__books-item book">
+                <a href="https://ilibrary.ru/text/1494/p.1/index.html" target="blank" class="book-a">
+                    <img src="./img/books/03.png" alt="Мы" class="book__bg">
+                    <div class="book__overlay"></div>
+                    <div class="book__info">
+                        <div class="book__info-title book__info-b">Мы</div>
+                        <div class="book__info-hidden">
+                            <div class="book__info-author">Е. И. Замятин</div>
+                            <div class="book__info-date">1920</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <a href="https://ilibrary.ru/" target="blank" class="main__books-link">Читать ещё</a>
+    </div>
+
+    <div class="main__link">
+        <div class="main__link-line"></div>
+        <div class="main__link-text">Захотели также?<br>Присоединяйтесь!</div>
+    </div>
+
+    <div id="classic-books" class="main__block">
+        <div class="main__block-link">
+            <!-- <div class="main__block-link-text">Перейти на страницу Творца</div> -->
+            <a href="reader.html" class="main__link-arrow-a"><img src="img/icons/arrow-link.png" alt="Reader Page Link" class="main__link-arrow"></a>
+        </div>
     </div>
 </main>
+
       <footer class="footer">
     <div class="footer__title no-select">
       <img src="img/logo.png" alt="СоЧит | Creade" class="top__logo-img">
@@ -91,6 +162,47 @@
       </div>
     </div>
 </footer>
+      <div id="login-popup" class="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#" class="popup__close"><strong>&times;</strong></a>
+            <div class="popup__content-form popup__form">
+                <div class="popup__form-title">Регистрация</div>
+    
+                <form action="#" class="popup__form-content no-select">
+                    <div class="popup__form-block">
+                        <label for="firstname" class="popup__form-text">Имя</label>
+                        <input type="text" id="firstname" class="popup__form-input" placeholder="Михаил" required>
+                    </div>
+
+                    <div class="popup__form-block">
+                        <label for="secondname" class="popup__form-text">Фамилия</label>
+                        <input type="text" id="secondname" class="popup__form-input" placeholder="Достоевский" required>
+                    </div>
+
+                    <div class="popup__form-block">
+                        <label for="patronymic" class="popup__form-text">Отчество<br><span>(при наличии)</span></label>
+                        <input type="text" id="patronymic" class="popup__form-input" placeholder="Николаевич">
+                    </div>
+
+                    <div class="popup__form-block">
+                        <label for="pseudo" class="popup__form-text">Псевдоним<br><span>(при наличии)</span></label>
+                        <input type="text" id="pseudo" class="popup__form-input" placeholder="Ахматова">
+                    </div>
+
+                    <div class="popup__form-block">
+                        <button type="submit" class="popup__form-button">Войти</button>
+                    </div>
+
+                    <div class="popup__form-block">
+                        <a href="#" class="popup__form-link">Войти в существующий профиль</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
     </div>
     
     <script src="./js/script.min.js"></script>

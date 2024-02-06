@@ -34,110 +34,104 @@
 
       <header id="creator-header" class="header">
     <div class="header__title header__title-special no-select">ТВОРЕЦ</div>
-    <div class="header__subtitle">Писатель, поэт, прозаик, эссеист,<br>словом - деятель искусства.</div>
+    <div class="header__subtitle">Писатель, поэт, прозаик, эссеист,<br>словом — деятель искусства.</div>
 
     <div class="header__bottom">
         <div class="header__bottom-line"></div>
-        <div class="header__bottom-text" style="font-size: 42px;">Создайте<br>своё произведение</div>
+        <div class="header__bottom-text">Создайте<br>своё произведение</div>
         <a href="#creator-main" class="header__bottom-arrow-a"><img src="img/icons/arrow-down.png" alt="Down" class="header__bottom-arrow"></a>
     </div>
 </header>
 
       <main id="creator-main" class="main">
+    <!-- <div class="main__tab-container tab-container">
+        <div class="tab__body main__form">
+        </div>
+
+        <div class="tab__body">
+            <div class="main__books-no">Здесь пока ничего нет.</div>
+        </div>
+
+        <div class="tab-header">
+            <div class="tab-header__item tab-header__item_active">Упрощённый режим</div>
+            <div class="tab-header__item">Расширенный режим</div>
+        </div>
+    </div> -->
+
     <div class="main__form">
         <div class="main__form-title">Быстрая<br>публикация</div>
+            
+        <form action="#" method="get">
+            <label for="name" class="main__form-text">Название</label>
+            <input type="text" name="name" id="name" placeholder="Мир и война" class="main__form-input" required>
+        </form>
 
-        <div class="main__form-body no-select">
-            <form action="#" method="get">
-                <label for="name" class="main__form-text">Название</label>
-                <input type="text" name="name" id="name" placeholder="Мир и война" class="main__form-input" required>
-            </form>
-    
-            <form action="# " method="get">
-                <label for="desc" class="main__form-text">Описание</label>
-                <input type="text" name="desc" id="desc" placeholder="Лучше не найти!" class="main__form-input">
-            </form>
+        <form action="# " method="get">
+            <label for="desc" class="main__form-text">Описание</label>
+            <textarea name="desc" id="desc" placeholder="Береги честь смолоду" cols="30" rows="2" class="main__form-input"></textarea>
+        </form>
 
-            <div class="main__form-upload">
-                <div class="main__form-upload-block">
-                    <div class="main__form-upload-title main__form-text">Текст</div>
-                    <form action="send.php" method="POST" id="file_upload">
-                        <input type="file" name="file" id="file" accept="application/pdf" class="main__form-input" required>
-                        <label for="file" id="file-label">
-                            <img src="img/icons/form/upload.png" alt="Upload" class="main__form-img">
-                            <div class="main__form-input-container">
-                                <div id="file-label-text" class="main__form-text-inside">
-                                    Выберите файл<br>
-                                    <!-- <span>или перетащите его</span> -->
-                                </div>
+        <div class="main__form-upload">
+            <div class="main__form-upload-block">
+                <div class="main__form-upload-title main__form-text">Текст</div>
+                <form action="send.php" method="POST" id="file_upload">
+                    <input type="file" name="file" id="file" accept="application/pdf" class="main__form-input" required>
+                    <label for="file" id="file-label">
+                        <img src="img/icons/form/upload.png" alt="Upload" class="main__form-img">
+                        <div class="main__form-input-container">
+                            <div id="file-label-text" class="main__form-text-inside">
+                                Выберите файл<br>
+                                <!-- <span>или перетащите его</span> -->
                             </div>
-                        </label>
-                    </form>
-                </div>
-
-                <div class="main__form-upload-block">
-                    <div class="main__form-upload-title main__form-text">Обложка</div>
-                    <form action="send.php" method="POST" id="cover_upload">
-                        <input type="file" name="cover" id="cover" accept="image/*" class="main__form-input" required>
-                        <label for="cover" id="cover-label">
-                            <img src="img/icons/form/upload.png" alt="Upload" class="main__form-img">
-                            <div class="main__form-input-container">
-                                <div id="cover-label-text" class="main__form-text-inside">
-                                    Выберите файл<br>
-                                    <!-- <span>или перетащите его</span> -->
-                                </div>
-                            </div>
-                        </label>
-                    </form>
-                </div>
+                        </div>
+                    </label>
+                </form>
             </div>
 
-            <button class="main__form-button">Опубликовать</button>
-            <br>
-            <a href="#" class="main__form-link">Расширенный режим</a>
+            <div class="main__form-upload-block">
+                <div class="main__form-upload-title main__form-text">Обложка</div>
+                <form action="send.php" method="POST" id="cover_upload">
+                    <input type="file" name="cover" id="cover" accept="image/*" class="main__form-input" required>
+                    <label for="cover" id="cover-label">
+                        <img src="img/icons/form/upload.png" alt="Upload" class="main__form-img">
+                        <div class="main__form-input-container">
+                            <div id="cover-label-text" class="main__form-text-inside">
+                                Выберите файл<br>
+                            </div>
+                        </div>
+                    </label>
+                </form>
+            </div>
         </div>
+
+        <button class="main__form-button">Опубликовать</button><br>
+        <a href="#" class="main__form-link">Расширенный режим</a>
     </div>
 
     <div class="main__link">
         <div class="main__link-line"></div>
-        <div class="main__link-text">Что сочиняют другие авторы?</div>
-        <a href="#user-books" class="main__link-arrow-a"><img src="img/icons/arrow-down.png" alt="Down" class="main__link-arrow"></a>
+        <div class="main__link-text">Ваши сочинения</div>
+        <a href="#user-books" class="main__link-arrow-a"><img src="img/icons/arrow-down.png" alt="Down" class="main__link-arrow" style="margin-top: 15px;"></a>
     </div>
 
-    <div id="user-books" class="main__books-user"></div>
+    <div id="user-books" class="main__block">
+        <div class="main-no">Здесь пока ничего нет.</div>
+        <!-- <div class="main__books">
+            <div class="main__books-body">
+            </div>
+        </div> -->
+    </div>
 
     <div class="main__link">
         <div class="main__link-line"></div>
         <div class="main__link-text">Вдохновитесь<br>классической литературой</div>
-        <a href="#classic-books" class="main__link-arrow-a"><img src="img/icons/arrow-down.png" alt="Down" class="main__link-arrow"></a>
     </div>
 
-    <div id="classic-books" class="main__books">
-        <!-- <div class="main__books-body">
-            <div id="book-01" class="main__books-block book">
-                <div class="book__overlay">
-                    <span class="book__overlay-author"></span>
-                    <span class="book__overlay-title"></span>
-                    <div class="book__overlay-extra">1861 г.</div>
-                </div>
-            </div>
-
-            <div id="book-02" class="main__books-block book">
-                <div class="book__overlay">
-                    <span class="book__overlay-author"></span>
-                    <span class="book__overlay-title"></span>
-                    <div class="book__overlay-extra">1861 г.</div>
-                </div>
-            </div>
-
-            <div id="book-03" class="main__books-block book">
-                <div class="book__overlay">
-                    <span class="book__overlay-author"></span>
-                    <span class="book__overlay-title"></span>
-                    <div class="book__overlay-extra">1861 г.</div>
-                </div>
-            </div>
-        </div> -->
+    <div id="classic-books" class="main__block">
+        <div class="main__block-link">
+            <!-- <div class="main__block-link-text">Перейти на страницу Ценителя</div> -->
+            <a href="reader.html" class="main__link-arrow-a"><img src="img/icons/arrow-link.png" alt="Reader Page Link" class="main__link-arrow"></a>
+        </div>
     </div>
 </main>
       <footer class="footer">
@@ -204,7 +198,7 @@
 
                     <div class="popup__form-block">
                         <label for="pseudo" class="popup__form-text">Псевдоним<br><span>(при наличии)</span></label>
-                        <input type="text" id="pseudo" class="popup__form-input" placeholder="Псевдоним">
+                        <input type="text" id="pseudo" class="popup__form-input" placeholder="Ахматова">
                     </div>
 
                     <div class="popup__form-block">
